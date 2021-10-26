@@ -1,0 +1,40 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+
+  .main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .insights {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .products {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  .releases {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

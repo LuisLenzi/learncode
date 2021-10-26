@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+
+    @media (max-width: 768px) {
+      width: 5.5px;
+      height: 5.5px;
+    }
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--blue-solid);
+
+    &:hover {
+      background: var(--blue-solid-light);
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--white-solid);
+  }
+}
+
+:root {
+  //Solid Colors
+  --white-solid: #f8f7f4;
+  --blue-solid: #141b29;
+  --blue-solid-light: #273249;
+
+  //Products
+  --z-flip: #dfd1ee;
+  --iphone: #123990;
+  --samsung-fe: #56b798;
+  --samsung-s21: #becdd7;
+  --vector-robot: #0e0e0f;
+  --amazon-kindle: #5e5c62;
+  --apple-watch: #e54149;
+  --amazon-echo-dot: #cbcdce;
+  --headset-razer-blackshark: #1f1f1f;
+
+  //Solid with Transparency
+  --gray-solid-plus-transparency: rgba(26, 26, 31, 0.975);
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  padding: 1rem 6rem;
+  background: var(--white-solid);
+}
+
+body,
+input,
+textarea,
+button,
+select,
+option {
+  font: 500 1rem Poppins, sans-serif;
+  color: var(--black-solid);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: Poppins, sans-serif;
+  color: var(--blue-solid);
+}
+
+h1 {
+  letter-spacing: -1px;
+  font-size: 2rem;
+}
+
+h2 {
+  letter-spacing: -1px;
+  font-size: 1.5rem;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+a {
+  outline: none;
+  border: none;
+}
