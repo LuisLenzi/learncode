@@ -1,5 +1,13 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
+const appearAnimation = keyframes`
+  0% {
+    opacity: 0;
+  },
+  100% {
+    opacity: 1;
+  }
+`
 export const Container = styled.div`
   width: 100%;
   display: flex;
@@ -7,7 +15,16 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 2rem 0;
-  max-width: 385px;
+  gap: 1rem;
+
+  .content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
 
   h1 {
     margin-left: 2rem;
@@ -26,9 +43,10 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    animation: ${appearAnimation} 0.5s linear;
 
     .product {
-      padding: 2rem 1rem;
+      padding: 2rem 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -41,12 +59,14 @@ export const Container = styled.div`
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
+        gap: .25rem;
 
         .title {
           color: var(--white-solid);
           font-size: 2rem;
           font-weight: 600;
           letter-spacing: -2px;
+          line-height: 2rem;
         }
 
         .description {
@@ -54,6 +74,7 @@ export const Container = styled.div`
           font-size: 1rem;
           font-weight: 300;
           letter-spacing: -0.5px;
+          line-height: 1rem;
         }
       }
     }

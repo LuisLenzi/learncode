@@ -11,7 +11,7 @@ export const Container = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: -.75px;
+  letter-spacing: -0.75px;
   font-weight: 600;
   gap: 1rem;
   border-radius: 25px;
@@ -25,10 +25,5 @@ export const Container = styled.button`
 
   :disabled {
     opacity: 0.35;
-
-    :hover {
-      cursor: not-allowed;
-      transform: scale(1) !important;
-    }
   }
 `

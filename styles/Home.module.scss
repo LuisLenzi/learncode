@@ -2,10 +2,10 @@
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-columns: 1.35fr 0.65fr;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 5rem;
 
   .main {
     width: 100%;
@@ -23,8 +23,7 @@
 
     .products {
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       align-items: flex-start;
       justify-content: center;
       gap: 2rem;

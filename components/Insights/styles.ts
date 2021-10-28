@@ -1,4 +1,13 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const appearAnimation = keyframes`
+  0% {
+    opacity: 0;
+  },
+  100% {
+    opacity: 1;
+  }
+`
 
 export const Container = styled.div`
   width: 100%;
@@ -7,6 +16,7 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 2rem 0;
+  gap: 1rem;
 
   h1 {
     margin-left: 2rem;
@@ -24,7 +34,8 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0rem 5rem;
+    padding: 0rem 6rem;
+    animation: ${appearAnimation} 1s linear;
 
     .product {
       display: flex;
@@ -39,12 +50,14 @@ export const Container = styled.div`
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
+        gap: .5rem;
 
         .title {
           color: var(--white-solid);
           font-size: 2.5rem;
           font-weight: 600;
           letter-spacing: -2px;
+          line-height: 2.5rem;
         }
 
         .description {
@@ -52,13 +65,14 @@ export const Container = styled.div`
           font-size: 1.15rem;
           font-weight: 300;
           letter-spacing: -0.5px;
+          line-height: 1.15rem;
         }
       }
 
       .price {
         color: var(--white-solid);
         font-size: 2.5rem;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: -1px;
       }
     }
@@ -81,10 +95,11 @@ export const Container = styled.div`
     button {
       width: 2rem;
       padding: 0.45rem 2.75rem;
+      background-color: var(--blue-solid);
 
       :hover {
         transform: scale(1.1) !important;
-        background-color: var(--white-solid);
+        background-color: var(--blue-solid);
       }
     }
   }

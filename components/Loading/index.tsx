@@ -1,4 +1,4 @@
-import { Container, LoadingSpinner } from './styles';
+import { Container } from './styles'
 
 interface LoadingProps {
   show: boolean
@@ -7,7 +7,9 @@ interface LoadingProps {
 export default function Loading({ show }: LoadingProps) {
   return (
     <Container show={show}>
-      <LoadingSpinner />
+      <div className="box">
+        <div className="image" />
+      </div>
     </Container>
-  );
+  )
 }
