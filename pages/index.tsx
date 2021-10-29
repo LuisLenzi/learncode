@@ -10,6 +10,7 @@ import Releases from '../components/Releases'
 import { Product } from '../services/api'
 
 import styles from '../styles/Home.module.scss'
+import Head from 'next/head'
 
 interface ProductsInterface {
   id: number
@@ -48,6 +49,14 @@ export default function Home({ insights, releases, products }: ProductsProps) {
     <>
       <Header />
       <div className={styles.container}>
+        <Head>
+          <title>Learn Code | E-Commerce</title>
+          <meta
+            property="og:title"
+            content="Learn Code | E-Commerce"
+            key="title"
+          />
+        </Head>
         <div className={styles.main}>
           <div className={styles.insights}>
             <Insights insights={insights} />

@@ -63,6 +63,7 @@ export const Container = styled.div<ContainerProps>`
             animation: ${appear} 2s linear;
 
             .image {
+              position: absolute;
               width: 100%;
               height: 100%;
               background: url('/assets/svg/logo.svg') center no-repeat;
