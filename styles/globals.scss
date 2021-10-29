@@ -66,6 +66,10 @@
 body {
   padding: 1rem 6rem;
   background: var(--white-solid);
+
+  @media (max-width: 1300px) {
+    padding: 1rem 3rem;
+  }
 }
 
 body,

@@ -57,44 +57,49 @@ export default function Insights({ insights }: InsightsProps) {
           boxShadow: `0px .25px 35px .25px ${insightsObject.style.backgroundColor}`,
         }}
       >
-        <div className="image">
-          <Image
-            src={`/assets/png/${insightsObject.style.image}`}
-            alt="Learn Code Logo"
-            width={250}
-            height={295}
-          />
-        </div>
-        <div className="product">
-          <div className="information">
-            <div
-              className="title"
-              style={{ color: insightsObject.style.titleColor }}
-            >
-              {insightsObject.productName}
+        <div className="boxContent">
+          <div className="image">
+            <Image
+              src={`/assets/png/${insightsObject.style.image}`}
+              alt="Learn Code Logo"
+              width={250}
+              height={295}
+            />
+          </div>
+          <div className="product">
+            <div className="information">
+              <div
+                className="title"
+                style={{ color: insightsObject.style.titleColor }}
+              >
+                {insightsObject.productName}
+              </div>
+              <div
+                className="description"
+                style={{ color: insightsObject.style.titleColor }}
+              >
+                {insightsObject.description}
+              </div>
             </div>
             <div
-              className="description"
+              className="price"
               style={{ color: insightsObject.style.titleColor }}
             >
-              {insightsObject.description}
+              {parseFloat(String(insightsObject.price)).toLocaleString(
+                'pt-br',
+                {
+                  style: 'currency',
+                  currency: 'BRL',
+                },
+              )}
             </div>
-          </div>
-          <div
-            className="price"
-            style={{ color: insightsObject.style.titleColor }}
-          >
-            {parseFloat(String(insightsObject.price)).toLocaleString('pt-br', {
-              style: 'currency',
-              currency: 'BRL',
-            })}
-          </div>
-          <div className="buy">
-            <Button
-              onClick={() => handleSetBuyStateAndData(true, insightsObject)}
-            >
-              Compre agora
-            </Button>
+            <div className="buy">
+              <Button
+                onClick={() => handleSetBuyStateAndData(true, insightsObject)}
+              >
+                Compre agora
+              </Button>
+            </div>
           </div>
         </div>
       </div>

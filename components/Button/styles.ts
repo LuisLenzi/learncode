@@ -17,6 +17,10 @@ export const Container = styled.button`
   border-radius: 25px;
   cursor: pointer;
 
+  @media (max-width: 768px) {
+    padding: .75rem 2.5rem;
+  }
+
   :hover {
     transform: scale(1.025);
     background-color: var(--blue-solid);

@@ -84,7 +84,20 @@ export async function Product() {
       productName: 'Galaxy Z Flip3 5G',
       description: 'Tela de 6,7 polegadas',
       price: 6299.1,
-      colors: [],
+      colors: [
+        {
+          colorName: 'Preto',
+          backgroundColor: '#313133',
+        },
+        {
+          colorName: 'Creme',
+          backgroundColor: '#f6f1d6',
+        },
+        {
+          colorName: 'Lilás',
+          backgroundColor: '#dfcfed',
+        },
+      ],
       style: {
         titleColor: 'var(--gray-solid)',
         backgroundColor: '#dfd1ee',

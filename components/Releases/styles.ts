@@ -18,6 +18,10 @@ export const Container = styled.div`
   max-width: 400px;
   gap: 1rem;
 
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+
   h1 {
     margin-left: 2rem;
     padding-bottom: 1rem;
@@ -38,6 +42,10 @@ export const Container = styled.div`
     margin-bottom: 4rem;
     animation: ${appearAnimation} 0.5s linear;
 
+    @media (min-width: 525px) and (max-width: 1024px) {
+      flex-direction: row;
+    }
+
     .product {
       padding: 3rem 2rem 4rem 2rem;
       display: flex;
@@ -46,13 +54,25 @@ export const Container = styled.div`
       flex-direction: column;
       gap: 2rem;
 
+      @media (max-width: 1024px) {
+        width: 100%;
+        justify-content: center;
+      }
+
       .information {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        gap: .5rem;
+        gap: 0.5rem;
+
+        @media (max-width: 1024px) {
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
 
         .title {
           color: var(--white-solid);
@@ -79,6 +99,10 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
+      @media (max-width: 1024px) {
+        justify-content: center;
+      }
     }
   }
 `

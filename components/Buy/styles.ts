@@ -26,7 +26,7 @@ export const Container = styled.div<ContainerProps>`
           align-items: flex-start;
           justify-content: center;
           z-index: 10;
-          padding: 7rem;
+          padding: 6rem;
           top: 0;
           left: 0;
 
@@ -40,8 +40,14 @@ export const Container = styled.div<ContainerProps>`
             justify-content: center;
             background-color: var(--white-solid);
             border-radius: 2rem;
-            padding: 5rem;
+            padding: 3rem 2rem;
             animation: ${appearAnimation} 1s linear;
+
+            @media (max-width: 1024px) {
+              display: flex;
+              flex-direction: column;
+              gap: 4rem;
+            }
 
             .information {
               padding: 0 4rem;

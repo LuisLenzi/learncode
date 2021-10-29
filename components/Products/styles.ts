@@ -24,6 +24,11 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     gap: 3rem;
+
+    @media (max-width: 550px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   h1 {
@@ -59,7 +64,7 @@ export const Container = styled.div`
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        gap: .25rem;
+        gap: 0.25rem;
 
         .title {
           color: var(--white-solid);
