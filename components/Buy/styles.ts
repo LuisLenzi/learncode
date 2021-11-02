@@ -130,7 +130,7 @@ export const Container = styled.div<ContainerProps>`
                   }
                 }
 
-                :hover {
+                &:hover {
                   transform: scale(1.35) rotate(180deg);
                 }
               }
@@ -187,10 +187,16 @@ export const Container = styled.div<ContainerProps>`
                     justify-content: center;
                     flex-direction: column;
                     gap: 1rem;
+                    cursor: pointer;
+                    transition: all ease-in-out 0.3s;
 
-                    :disabled {
+                    &:disabled {
                       border: 1px solid var(--blue-solid-light);
                       opacity: 0.8;
+                    }
+
+                    &:hover {
+                      transform: scale(1.025);
                     }
 
                     .colorRadius {

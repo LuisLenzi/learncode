@@ -1,14 +1,13 @@
-import styled, { keyframes } from 'styled-components'
-
-const appearAnimation = keyframes`
+@keyframes appearAnimation {
   0% {
     opacity: 0;
-  },
+  }
   100% {
     opacity: 1;
   }
-`
-export const Container = styled.div`
+}
+
+.container {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -48,7 +47,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    animation: ${appearAnimation} 0.5s linear;
+    animation: appearAnimation 0.5s linear;
 
     .product {
       padding: 2rem 2rem;
@@ -132,4 +131,4 @@ export const Container = styled.div`
       }
     }
   }
-`
+}

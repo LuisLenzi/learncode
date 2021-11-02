@@ -4,10 +4,9 @@ import Image from 'next/image'
 
 import Button from '../Button'
 
-import { Container } from './styles'
-
 import { Context } from '../../contexts/context'
 
+import styles from './Releases.module.scss'
 interface ReleasesInterface {
   id: number
   productName: string
@@ -34,40 +33,40 @@ export default function Releases({ releases }: ReleasesProps) {
   const { handleSetBuyStateAndData } = useContext(Context)
 
   return (
-    <Container>
+    <div className={styles.container}>
       <h1>Lançamentos</h1>
       {releases.map((release) => {
         return (
           <div
-            className="box"
+            className={styles.box}
             style={{
               backgroundColor: release.style.backgroundColor,
               boxShadow: `0px .25px 35px .25px ${release.style.backgroundColor}`,
             }}
             key={release.id}
           >
-            <div className="product">
-              <div className="information">
+            <div className={styles.product}>
+              <div className={styles.information}>
                 <div
-                  className="title"
+                  className={styles.title}
                   style={{ color: release.style.titleColor }}
                 >
                   {release.productName}
                 </div>
                 <div
-                  className="description"
+                  className={styles.description}
                   style={{ color: release.style.titleColor }}
                 >
                   {release.description}
                 </div>
               </div>
-              <div className="buy">
+              <div className={styles.buy}>
                 <Button onClick={() => handleSetBuyStateAndData(true, release)}>
                   Compre agora
                 </Button>
               </div>
             </div>
-            <div className="image">
+            <div className={styles.image}>
               <Image
                 src={`/assets/png/${release.style.image}`}
                 alt="Learn Code Logo"
@@ -78,6 +77,6 @@ export default function Releases({ releases }: ReleasesProps) {
           </div>
         )
       })}
-    </Container>
+    </div>
   )
 }

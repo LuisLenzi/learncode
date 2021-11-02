@@ -99,6 +99,7 @@ export default function Buy({ buy, show }: BuyProps) {
                   height={450}
                   objectFit="contain"
                   className="image"
+                  quality={25}
                 />
                 <div className="quantity">
                   {Object.keys(colorsObject).map(
@@ -154,8 +155,7 @@ export default function Buy({ buy, show }: BuyProps) {
                             <div
                               className="colorRadius"
                               style={{
-                                backgroundColor:
-                                  colorsObject[color].backgroundColor,
+                                background: colorsObject[color].backgroundColor,
                               }}
                             />
                             <p className="colorName">

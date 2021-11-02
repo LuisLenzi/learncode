@@ -6,8 +6,7 @@ import Button from '../Button'
 
 import { Context } from '../../contexts/context'
 
-import { Container } from './styles'
-
+import styles from './Products.module.scss'
 interface ProductsInterface {
   id: number
   productName: string
@@ -35,37 +34,37 @@ export default function Products({ products }: ProductsProps) {
   const { handleSetBuyStateAndData } = useContext(Context)
 
   return (
-    <Container>
+    <div className={styles.container}>
       <h1>Produtos</h1>
-      <div className="content">
+      <div className={styles.content}>
         {products.map((product) => {
           return (
             <div
-              className="box"
+              className={styles.box}
               style={{
                 backgroundColor: product.style.backgroundColor,
                 boxShadow: `0px .25px 35px .25px ${product.style.backgroundColor}`,
               }}
               key={product.id}
             >
-              <div className="product">
-                <div className="information">
+              <div className={styles.product}>
+                <div className={styles.information}>
                   <div
-                    className="title"
+                    className={styles.title}
                     style={{ color: product.style.titleColor }}
                   >
                     {product.productName}
                   </div>
                   <div
-                    className="description"
+                    className={styles.description}
                     style={{ color: product.style.titleColor }}
                   >
                     {product.description}
                   </div>
                 </div>
-                <div className="buy">
+                <div className={styles.buy}>
                   {product.promotion && (
-                    <div className="promotion">
+                    <div className={styles.promotion}>
                       <span>{product.promotion.toFixed(2)}% OFF</span>
                     </div>
                   )}
@@ -76,7 +75,7 @@ export default function Products({ products }: ProductsProps) {
                   </Button>
                 </div>
               </div>
-              <div className="image">
+              <div className={styles.image}>
                 <Image
                   src={`/assets/png/${product.style.image}`}
                   alt="Learn Code Logo"
@@ -88,6 +87,6 @@ export default function Products({ products }: ProductsProps) {
           )
         })}
       </div>
-    </Container>
+    </div>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import styles from './Header.module.scss'
 
 import { FiSearch } from 'react-icons/fi'
 import { BsHeadset } from 'react-icons/bs'
+
+import styles from './Header.module.scss'
 
 export default function Header() {
   return (

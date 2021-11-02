@@ -3,8 +3,9 @@ import Image from 'next/image'
 
 import Button from '../Button'
 
-import { Container } from './styles'
 import { Context } from '../../contexts/context'
+
+import styles from './Insights.module.scss'
 
 interface InsightsInterface {
   id: number
@@ -59,18 +60,18 @@ export default function Insights({ insights }: InsightsProps) {
   }, [isActive])
 
   return (
-    <Container>
+    <div className={styles.container}>
       <h1>Destaques</h1>
       <div
-        className="box"
+        className={styles.box}
         key={insightsObject.id}
         style={{
           backgroundColor: insightsObject.style.backgroundColor,
           boxShadow: `0px .25px 35px .25px ${insightsObject.style.backgroundColor}`,
         }}
       >
-        <div className="boxContent">
-          <div className="image">
+        <div className={styles.boxContent}>
+          <div className={styles.image}>
             <Image
               src={`/assets/png/${insightsObject.style.image}`}
               alt="Learn Code Logo"
@@ -78,23 +79,23 @@ export default function Insights({ insights }: InsightsProps) {
               height={295}
             />
           </div>
-          <div className="product">
-            <div className="information">
+          <div className={styles.product}>
+            <div className={styles.information}>
               <div
-                className="title"
+                className={styles.title}
                 style={{ color: insightsObject.style.titleColor }}
               >
                 {insightsObject.productName}
               </div>
               <div
-                className="description"
+                className={styles.description}
                 style={{ color: insightsObject.style.titleColor }}
               >
                 {insightsObject.description}
               </div>
             </div>
             <div
-              className="price"
+              className={styles.price}
               style={{ color: insightsObject.style.titleColor }}
             >
               {parseFloat(String(insightsObject.price)).toLocaleString(
@@ -105,7 +106,7 @@ export default function Insights({ insights }: InsightsProps) {
                 },
               )}
             </div>
-            <div className="buy">
+            <div className={styles.buy}>
               <Button
                 onClick={() => handleSetBuyStateAndData(true, insightsObject)}
               >
@@ -115,7 +116,7 @@ export default function Insights({ insights }: InsightsProps) {
           </div>
         </div>
       </div>
-      <div className="slider">
+      <div className={styles.slider}>
         {product.map((index: number) => {
           return index === isActive ? (
             <Button key={index} />
@@ -128,6 +129,6 @@ export default function Insights({ insights }: InsightsProps) {
           )
         })}
       </div>
-    </Container>
+    </div>
   )
 }
