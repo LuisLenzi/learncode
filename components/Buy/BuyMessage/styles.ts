@@ -67,8 +67,9 @@ export const Container = styled.div<ContainerProps>`
             padding: 3rem;
             animation: ${appearAnimation} 1s linear;
 
-            @media (max-width: 595px) {
+            @media (max-width: 650px) {
               flex-direction: column;
+              display: flex;
               height: 95%;
               gap: 2rem;
             }
