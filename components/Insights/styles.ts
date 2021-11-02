@@ -51,7 +51,7 @@ export const Container = styled.div`
       padding: 0 2rem;
       gap: 3rem;
 
-      @media (max-width: 575px) {
+      @media (max-width: 595px) {
         justify-content: center;
         flex-direction: column;
         gap: 4rem;
