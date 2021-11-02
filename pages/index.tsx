@@ -17,11 +17,13 @@ interface ProductsInterface {
   productName: string
   description: string
   price: number
+  promotion: number
   colors: [
     {
       colorName: string
       backgroundColor: string
       quantity: number
+      image: string
     },
   ]
   style: {
