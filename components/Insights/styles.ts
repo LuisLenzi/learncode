@@ -51,11 +51,8 @@ export const Container = styled.div`
       padding: 0 2rem;
       gap: 3rem;
 
-      @media (max-width: 595px) {
+      @media (max-width: 550px) {
         justify-content: center;
-        flex-direction: column;
-        gap: 4rem;
-        padding: 4rem 2rem 0 2rem;
       }
 
       .product {
@@ -67,7 +64,6 @@ export const Container = styled.div`
 
         @media (max-width: 595px) {
           align-items: center;
-          order: 1;
         }
 
         .information {
@@ -114,7 +110,6 @@ export const Container = styled.div`
         justify-content: center;
 
         @media (max-width: 595px) {
-          order: 2;
         }
       }
     }

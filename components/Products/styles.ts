@@ -121,6 +121,10 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
+      @media (max-width: 1024px) {
+        justify-content: center;
+      }
     }
   }
 `
