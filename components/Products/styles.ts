@@ -66,6 +66,11 @@ export const Container = styled.div`
         flex-direction: column;
         gap: 0.25rem;
 
+        @media (max-width: 550px) {
+          align-items: center;
+          text-align: center;
+        }
+
         .title {
           color: var(--white-solid);
           font-size: 2rem;
