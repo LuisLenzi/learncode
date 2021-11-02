@@ -9,18 +9,26 @@ export async function Product() {
         {
           colorName: 'Azul-Sierra',
           backgroundColor: '#9ab5cd',
+          quantity: 10,
+          image: 'iphone13pro-azul-sierra.png',
         },
         {
           colorName: 'Prateado',
           backgroundColor: '#f7f7f0',
+          quantity: 6,
+          image: 'iphone13pro-prateado.png',
         },
         {
           colorName: 'Dourado',
           backgroundColor: '#fbe9d0',
+          quantity: 3,
+          image: 'iphone13pro-dourado.png',
         },
         {
           colorName: 'Grafite',
           backgroundColor: '#6a6864',
+          quantity: 7,
+          image: 'iphone13pro-grafite.png',
         },
       ],
       style: {
@@ -38,18 +46,26 @@ export async function Product() {
         {
           colorName: 'Cloud Mint',
           backgroundColor: '#8bcfba',
+          quantity: 8,
+          image: 's20fe.png',
         },
         {
           colorName: 'Cloud Navy',
           backgroundColor: '#283344',
+          quantity: 4,
+          image: 's20fe-azul.png',
         },
         {
           colorName: 'Cloud Orange',
           backgroundColor: '#ffc189',
+          quantity: 5,
+          image: 's20fe-laranja.png',
         },
         {
           colorName: 'Cloud White',
           backgroundColor: '#f6f2f1',
+          quantity: 2,
+          image: 's20fe-branco.png',
         },
       ],
       style: {
@@ -67,10 +83,14 @@ export async function Product() {
         {
           colorName: 'Prata',
           backgroundColor: '#c4d1da',
+          quantity: 2,
+          image: 's21ultra-prata.png',
         },
         {
           colorName: 'Preto',
           backgroundColor: '#0d0d0d',
+          quantity: 1,
+          image: 's21ultra-preto.png',
         },
       ],
       style: {
@@ -88,14 +108,20 @@ export async function Product() {
         {
           colorName: 'Preto',
           backgroundColor: '#313133',
+          quantity: 5,
+          image: 'zflip-preto.png',
         },
         {
           colorName: 'Creme',
           backgroundColor: '#f6f1d6',
+          quantity: 5,
+          image: 'zflip-creme.png',
         },
         {
           colorName: 'Lilás',
           backgroundColor: '#dfcfed',
+          quantity: 5,
+          image: 'zflip-lilas.png',
         },
       ],
       style: {
@@ -109,7 +135,32 @@ export async function Product() {
       productName: 'Apple Watch Serie 6 GPS 44MM',
       description: '6ª Geração',
       price: 3846.99,
-      colors: [],
+      colors: [
+        {
+          colorName: 'Branco',
+          backgroundColor: '#e7e3e2',
+          quantity: 8,
+          image: 'applewatch-branco.png',
+        },
+        {
+          colorName: 'Preto',
+          backgroundColor: '#363533',
+          quantity: 3,
+          image: 'applewatch-preto.png',
+        },
+        {
+          colorName: 'Vermelho',
+          backgroundColor: '#df3d45',
+          quantity: 0,
+          image: 'applewatch-vermelho.png',
+        },
+        {
+          colorName: 'Azul-Marinho',
+          backgroundColor: '#31354b',
+          quantity: 0,
+          image: 'applewatch-azul-marinho.png',
+        },
+      ],
       style: {
         titleColor: 'var(--gray-solid)',
         backgroundColor: '#e54149',
@@ -121,7 +172,15 @@ export async function Product() {
       productName: 'Headset Razer Blackshark',
       description: 'Tecnologia 7.1',
       price: 799.9,
-      colors: [],
+      colors: [
+        {
+          colorName: 'Preto e Verde',
+          backgroundColor:
+            'linear-gradient(89.67deg, #141414 44.01%, #0BEB0B 53.02%)',
+          quantity: 2,
+          image: 'blackshark.png',
+        },
+      ],
       style: {
         titleColor: '#17ed17',
         backgroundColor: '#000000',
@@ -133,7 +192,21 @@ export async function Product() {
       productName: 'Amazon Kindle',
       description: '10ª Geração',
       price: 379.05,
-      colors: [],
+      promotion: 20.0,
+      colors: [
+        {
+          colorName: 'Branco',
+          backgroundColor: '#f4f4f4',
+          quantity: 4,
+          image: 'kindle-branco.png',
+        },
+        {
+          colorName: 'Preto',
+          backgroundColor: '#2a2829',
+          quantity: 2,
+          image: 'kindle-preto.png',
+        },
+      ],
       style: {
         titleColor: 'var(--white-solid)',
         backgroundColor: '#5e5c62',
@@ -145,7 +218,20 @@ export async function Product() {
       productName: 'Amazon Echo dot',
       description: '4ª Geração + Alexa',
       price: 474.05,
-      colors: [],
+      colors: [
+        {
+          colorName: 'Branco',
+          backgroundColor: '#f4f4f4',
+          quantity: 5,
+          image: 'echodot.png',
+        },
+        {
+          colorName: 'Preto',
+          backgroundColor: '#2a2829',
+          quantity: 1,
+          image: 'echodot-preto.png',
+        },
+      ],
       style: {
         titleColor: 'var(--gray-solid)',
         backgroundColor: '#cbcdce',
@@ -158,7 +244,14 @@ export async function Product() {
       description:
         "Diga 'Hey Vector'. Companheiros de robôs agora são uma realidade!",
       price: 4499,
-      colors: [],
+      colors: [
+        {
+          colorName: 'Preto',
+          backgroundColor: '#0f0f0f',
+          quantity: 0,
+          image: 'vector.png',
+        },
+      ],
       style: {
         titleColor: 'var(--white-solid)',
         backgroundColor: '#1f1f1f',

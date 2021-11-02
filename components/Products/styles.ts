@@ -82,6 +82,37 @@ export const Container = styled.div`
           line-height: 1rem;
         }
       }
+
+      .buy {
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media (max-width: 550px) {
+          height: auto;
+        }
+
+        .promotion {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            color: var(--white-solid);
+            background-color: var(--dark-purple);
+            border-radius: 1rem;
+            padding: 1rem;
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.5rem;
+            box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
     }
 
     .image {

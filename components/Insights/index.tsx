@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import Image from 'next/image'
 
 import Button from '../Button'
@@ -32,7 +32,7 @@ export default function Insights({ insights }: InsightsProps) {
   const product: number[] = [0, 1, 2]
 
   const [isActive, setIsActive] = useState(0)
-  const [insightsObject, setInsightsObject] = useState(insights[0])
+  const [insightsObject, setInsightsObject] = useState(insights[isActive])
 
   const { handleSetBuyStateAndData } = useContext(Context)
 
@@ -45,6 +45,18 @@ export default function Insights({ insights }: InsightsProps) {
     setIsActive(index)
     setInsightsObject(insights[index])
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (isActive === insights.length - 1) {
+        setIsActive(0)
+        setInsightsObject(insights[0])
+      } else {
+        setIsActive(isActive + 1)
+        setInsightsObject(insights[isActive + 1])
+      }
+    }, 10000)
+  }, [isActive])
 
   return (
     <Container>

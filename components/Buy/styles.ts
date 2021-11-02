@@ -36,7 +36,6 @@ export const Container = styled.div<ContainerProps>`
 
           .content {
             width: 100%;
-            height: 100%;
             height: auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -52,6 +51,57 @@ export const Container = styled.div<ContainerProps>`
               flex-direction: column;
               gap: 4rem;
               padding-bottom: 4rem;
+            }
+
+            .image {
+              transition: all ease-in-out 2s;
+            }
+
+            .imagePlusQuantity {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-direction: column;
+              gap: 3rem;
+
+              .quantity {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+
+                div {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 2rem;
+
+                  .quantityNumber {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                  }
+
+                  button {
+                    padding: 1rem 1.15rem;
+                    width: auto;
+                    height: auto;
+                    border-radius: 0.75rem;
+                    background-color: var(--blue-solid);
+                    color: var(--white-solid);
+                  }
+                }
+              }
+
+              .inventory {
+                font-size: 0.9rem;
+                color: var(--gray-solid);
+                letter-spacing: -0.5px;
+                opacity: 0.8;
+                padding: 1rem 0;
+              }
             }
 
             .information {
@@ -164,10 +214,38 @@ export const Container = styled.div<ContainerProps>`
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+                gap: 2rem;
+
+                @media (max-width: 475px) {
+                  flex-direction: column;
+                  align-items: center;
+                  text-align: center;
+                }
+
+                .lined {
+                  font-size: 2rem;
+                  text-decoration: line-through;
+                  opacity: 0.5;
+                }
 
                 h1 {
                   font-weight: 600;
                   font-size: 3rem;
+                }
+
+                span {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: var(--white-solid);
+                  background-color: var(--dark-purple);
+                  border-radius: 1rem;
+                  padding: 1rem;
+                  font-size: 1.25rem;
+                  font-weight: 800;
+                  letter-spacing: -1px;
+                  line-height: 1.5rem;
+                  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.25);
                 }
               }
 

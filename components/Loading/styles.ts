@@ -4,7 +4,7 @@ interface ContainerProps {
   show: boolean
 }
 
-const appear = keyframes`
+const appearAnimation = keyframes`
   0% {
     opacity: 0;
   }
@@ -14,7 +14,7 @@ const appear = keyframes`
   }
 `
 
-const disappear = keyframes`
+const disappearAnimation = keyframes`
   0% {
     opacity: 1;
 
@@ -50,7 +50,7 @@ export const Container = styled.div<ContainerProps>`
           z-index: 10;
           left: 0;
           top: 0;
-          animation: ${disappear} 1s 3s linear;
+          animation: ${disappearAnimation} 1s 3s linear;
 
           .box {
             width: 100%;
@@ -60,14 +60,12 @@ export const Container = styled.div<ContainerProps>`
             justify-content: center;
             flex-direction: column;
             transition: all ease-in-out 2s;
-            animation: ${appear} 2s linear;
+            animation: ${appearAnimation} 2s linear;
 
             .image {
               position: absolute;
               width: 100%;
               height: 100%;
-              background: url('/assets/svg/logo.svg') center no-repeat;
-              background-size: 10%;
               display: flex;
               align-items: center;
               justify-content: center;

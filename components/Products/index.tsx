@@ -13,6 +13,7 @@ interface ProductsInterface {
   productName: string
   description: string
   price: number
+  promotion: number
   colors: [
     {
       colorName: string
@@ -63,6 +64,11 @@ export default function Products({ products }: ProductsProps) {
                   </div>
                 </div>
                 <div className="buy">
+                  {product.promotion && (
+                    <div className="promotion">
+                      <span>{product.promotion.toFixed(2)}% OFF</span>
+                    </div>
+                  )}
                   <Button
                     onClick={() => handleSetBuyStateAndData(true, product)}
                   >

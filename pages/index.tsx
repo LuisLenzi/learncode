@@ -21,6 +21,7 @@ interface ProductsInterface {
     {
       colorName: string
       backgroundColor: string
+      quantity: number
     },
   ]
   style: {
