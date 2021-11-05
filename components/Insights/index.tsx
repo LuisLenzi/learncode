@@ -48,7 +48,7 @@ export default function Insights({ insights }: InsightsProps) {
   }
 
   useEffect(() => {
-    setTimeout(() => {
+    const interval = setInterval(() => {
       if (isActive === insights.length - 1) {
         setIsActive(0)
         setInsightsObject(insights[0])
@@ -56,8 +56,9 @@ export default function Insights({ insights }: InsightsProps) {
         setIsActive(isActive + 1)
         setInsightsObject(insights[isActive + 1])
       }
-    }, 10000)
-  }, [isActive])
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [isActive, insights])
 
   return (
     <div className={styles.container}>

@@ -210,7 +210,6 @@ export default function Buy({ buy, show }: BuyProps) {
                           })}
                         </h1>
                       </div>
-
                       <div className="promotion">
                         <span>{buy.promotion.toFixed(2)}% OFF</span>
                       </div>
