@@ -210,11 +210,9 @@ export default function Buy({ buy, show }: BuyProps) {
                           })}
                         </h1>
                       </div>
-                      {buy.promotion && (
-                        <div className="promotion">
-                          <span>{buy.promotion.toFixed(2)}% OFF</span>
-                        </div>
-                      )}
+                      <div className="promotion">
+                        <span>{buy.promotion.toFixed(2)}% OFF</span>
+                      </div>
                     </>
                   ) : (
                     <h1>
@@ -243,8 +241,9 @@ export default function Buy({ buy, show }: BuyProps) {
                 ) : (
                   <Button className="mobileButton" onClick={handleBuy}>
                     Finalizar compra por{' '}
-                    {buy.promotion
-                      ? parseFloat(
+                    {buy.promotion ? (
+                      <>
+                        {parseFloat(
                           String(
                             price.current * quantity -
                               (buy.promotion / 100) * price.current * quantity,
@@ -252,16 +251,19 @@ export default function Buy({ buy, show }: BuyProps) {
                         ).toLocaleString('pt-br', {
                           style: 'currency',
                           currency: 'BRL',
-                        })
-                      : parseFloat(
-                          String(price.current * quantity),
-                        ).toLocaleString('pt-br', {
-                          style: 'currency',
-                          currency: 'BRL',
                         })}
-                    <div className="promotion">
-                      <span>{buy.promotion.toFixed(2)}% OFF</span>
-                    </div>
+                        <div className="promotion">
+                          <span>{buy.promotion.toFixed(2)}% OFF</span>
+                        </div>
+                      </>
+                    ) : (
+                      parseFloat(
+                        String(price.current * quantity),
+                      ).toLocaleString('pt-br', {
+                        style: 'currency',
+                        currency: 'BRL',
+                      })
+                    )}
                   </Button>
                 )}
               </div>
