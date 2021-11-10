@@ -46,10 +46,55 @@ export const Container = styled.div<ContainerProps>`
             padding: 3rem 2rem;
             animation: ${appearAnimation} 1s linear;
 
+            .buyButton {
+              width: 100%;
+              color: var(--blue-solid);
+              font-size: 0.9rem;
+              padding: 1.05rem 3.75rem;
+              background-color: var(--white-solid);
+              box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.25);
+              transition: all 0.3s ease-in-out;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              letter-spacing: -0.75px;
+              font-weight: 600;
+              gap: 1rem;
+              border-radius: 25px;
+              cursor: pointer;
+
+              @media (max-width: 1024px) {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                height: 4rem;
+                bottom: 0;
+                left: 0;
+                border-radius: 25px 25px 0 0px;
+              }
+
+              @media (max-width: 768px) {
+                padding: 0.75rem 2.5rem;
+              }
+
+              &:hover {
+                transform: scale(1.025);
+                background-color: var(--blue-solid);
+                color: var(--white-solid);
+              }
+
+              &:disabled {
+                opacity: 0.35;
+                transform: scale(1);
+              }
+            }
+
             @media (max-width: 1024px) {
               display: flex;
               flex-direction: column;
-              gap: 4rem;
+              gap: 2rem;
               padding-bottom: 4rem;
             }
 
@@ -64,7 +109,7 @@ export const Container = styled.div<ContainerProps>`
               align-items: center;
               justify-content: space-between;
               flex-direction: column;
-              gap: 3rem;
+              gap: 2rem;
 
               .quantity {
                 width: 100%;
@@ -114,6 +159,10 @@ export const Container = styled.div<ContainerProps>`
               flex-direction: column;
               gap: 2rem;
 
+              @media (max-width: 1024px) {
+                padding: 0 4rem 2rem 4rem;
+              }
+
               .close {
                 cursor: pointer;
                 right: 3rem;
@@ -145,6 +194,7 @@ export const Container = styled.div<ContainerProps>`
                 gap: 0.25rem;
 
                 .productName {
+                  line-height: 2rem;
                   font-weight: 600;
                 }
 
@@ -209,6 +259,7 @@ export const Container = styled.div<ContainerProps>`
                     .colorName {
                       font-size: 1.15rem;
                       font-weight: 300;
+                      line-height: 1.15rem;
                     }
                   }
                 }

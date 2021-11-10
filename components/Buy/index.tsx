@@ -226,9 +226,13 @@ export default function Buy({ buy, show }: BuyProps) {
                   )}
                 </div>
                 {inventory.current[isActive] === 0 ? (
-                  <Button disabled>Compra indisponível</Button>
+                  <Button className="buyButton" disabled>
+                    Compra indisponível
+                  </Button>
                 ) : (
-                  <Button onClick={handleBuy}>Finalizar compra</Button>
+                  <Button className="buyButton" onClick={handleBuy}>
+                    Finalizar compra
+                  </Button>
                 )}
               </div>
             </>
