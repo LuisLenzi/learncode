@@ -226,12 +226,27 @@ export default function Buy({ buy, show }: BuyProps) {
                   )}
                 </div>
                 {inventory.current[isActive] === 0 ? (
-                  <Button className="buyButton" disabled>
+                  <Button className="desktopButton" disabled>
                     Compra indisponível
                   </Button>
                 ) : (
-                  <Button className="buyButton" onClick={handleBuy}>
+                  <Button className="desktopButton" onClick={handleBuy}>
                     Finalizar compra
+                  </Button>
+                )}
+                {inventory.current[isActive] === 0 ? (
+                  <Button className="mobileButton" disabled>
+                    Compra indisponível
+                  </Button>
+                ) : (
+                  <Button className="mobileButton" onClick={handleBuy}>
+                    Finalizar compra por{' '}
+                    {parseFloat(
+                      String(price.current * quantity),
+                    ).toLocaleString('pt-br', {
+                      style: 'currency',
+                      currency: 'BRL',
+                    })}
                   </Button>
                 )}
               </div>
