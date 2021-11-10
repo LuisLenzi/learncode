@@ -66,10 +66,25 @@ export const Container = styled.div<ContainerProps>`
                 border-radius: 25px;
                 cursor: pointer;
                 position: fixed;
-                height: 4rem;
+                height: 4.5rem;
                 bottom: 0;
                 left: 0;
                 border-radius: 25px 25px 0 0px;
+
+                span {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: var(--white-solid);
+                  background-color: var(--dark-purple);
+                  border-radius: .75rem;
+                  padding: .75rem;
+                  font-size: 1rem;
+                  font-weight: 800;
+                  letter-spacing: -1px;
+                  line-height: 1.5rem;
+                  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.25);
+                }
 
                 @media (max-width: 768px) {
                   padding: 0.75rem 2.5rem;
